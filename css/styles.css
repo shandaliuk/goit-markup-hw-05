@@ -69,6 +69,10 @@ body {
   list-style: none;
 }
 
+.link {
+  text-decoration: none;
+}
+
 /* For every title */
 
 .title {
@@ -82,7 +86,6 @@ body {
 .main-logo-header,
 .main-logo-footer {
   color: var(--black-color);
-  text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   font-weight: 700;
@@ -132,7 +135,6 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--secondary-text-color);
-  text-decoration: none;
 }
 
 .site-contacts {
@@ -145,7 +147,6 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--main-text-color);
-  text-decoration: none;
 }
 
 .site-contacts-envelope-icon {
@@ -442,7 +443,6 @@ body {
 
 .company-address-link {
   color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
 }
 
 .company-address-exact-address {
@@ -507,7 +507,14 @@ body {
   background-color: var(--white-color);
 }
 
-.work-samples-list-item:hover {
+.work-samples-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.work-samples-link:hover,
+.work-samples-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -534,6 +541,7 @@ body {
 
 .work-samples-text {
   line-height: 1.88;
+  color: var(--main-text-color);
 }
 
 /* Current page colorizing */
