@@ -283,7 +283,7 @@ body {
   justify-content: center;
   width: 370px;
   height: 70px;
-  background: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .company-activities-text {
@@ -541,15 +541,22 @@ body {
 
 .work-samples-link {
   display: block;
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-samples-link:hover,
 .work-samples-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.work-samples-link:hover .work-samples-overlay,
+.work-samples-link:focus .work-samples-overlay {
+  transform: translateY(0);
 }
 
 .work-samples-title {
@@ -575,6 +582,30 @@ body {
 .work-samples-text {
   line-height: 1.88;
   color: var(--main-text-color);
+}
+
+.work-samples-thumb {
+  overflow: hidden;
+  position: relative;
+}
+
+.work-samples-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-samples-overlay-text {
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
 }
 
 /* Current page colorizing */
